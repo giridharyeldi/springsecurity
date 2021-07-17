@@ -23,6 +23,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 		//http.formLogin();//Form based authentication
 		http.httpBasic();  //Basic Authentication
 		http.authorizeRequests().anyRequest().authenticated();
+		/* Add custom filter here....
+		http.addFilterBefore(new MyCustomFilter(), BasicAuthenticationFilter.class);
+		*/
 	}
 
 	
